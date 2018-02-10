@@ -8,7 +8,10 @@ import router from './router';
 Vue.use(Vuetify);
 
 Vue.config.productionTip = false;
+
+// Global Stylesheets
 import('../node_modules/vuetify/dist/vuetify.min.css');
+import('../node_modules/material-design-icons/iconfont/material-icons.css');
 
 /* eslint-disable no-new */
 new Vue({
