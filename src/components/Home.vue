@@ -21,7 +21,10 @@
             <a href="#!" class="body-2 black--text">EDIT</a>
           </v-flex>
         </v-layout>
-        <v-list-group v-else-if="item.children" v-bind:key="item" v-model="item.model" no-action>
+        <v-list-group v-else-if="item.children"
+          v-bind:key="item.text"
+          v-model="item.model"
+          no-action>
           <v-list-tile slot="item" @click="onclick">
             <v-list-tile-action>
               <v-icon>{{ item.model ? item.icon : item['icon-alt'] }}</v-icon>
@@ -46,7 +49,7 @@
             </v-list-tile-content>
           </v-list-tile>
         </v-list-group>
-        <v-list-tile v-else v-bind:key="item" @click="onclick">
+        <v-list-tile v-else v-bind:key="item.text" @click="onclick">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>

@@ -4,6 +4,7 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import App from './App';
 import router from './router';
+import createStore from './store';
 
 Vue.use(Vuetify);
 
@@ -17,6 +18,7 @@ import('../node_modules/material-design-icons/iconfont/material-icons.css');
 new Vue({
   el: '#app',
   router,
+  store: createStore(),
   components: { App },
   template: '<App/>',
 });
